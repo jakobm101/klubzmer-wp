@@ -1,0 +1,45 @@
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore compiled assets (if using SASS, LESS, or build tools)
+node_modules/
+npm-debug.log
+yarn.lock
+package-lock.json
+public/
+dist/
+build/
+
+# Ignore WordPress cache and logs
+*.log
+wp-content/cache/
+wp-content/debug.log
+
+# Ignore SASS/LESS temp files
+.sass-cache/
+*.map
+
+# Ignore IDE and editor files
+*.swp
+*.swo
+*.swn
+*.bak
+*.tmp
+*.vscode/
+*.idea/
+*.project
+*.settings/
+
+# Ignore Composer dependencies (if using PHP package management)
+vendor/
+composer.lock
+
+# Ignore WordPress-generated files
+*.mo
+*.po
+*.pot
+
+# Ignore sensitive config files
+.env
+config.json
