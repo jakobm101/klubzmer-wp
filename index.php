@@ -1,24 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php bloginfo('name'); ?></title>
-    <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
-    <?php wp_head(); ?>
-</head>
-<body>
-    <?php get_header(); ?>
-    <main>
-        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-            <article>
-                <h2 style="color: var(--gold);"><?php the_title(); ?></h2>
-                <?php the_post_thumbnail('medium'); ?>
-                <div><?php the_content(); ?></div>
-            </article>
-        <?php endwhile; endif; ?>
-    </main>
-    <?php get_footer(); ?>
-    <?php wp_footer(); ?>
-</body>
-</html>
+<?php get_header(); ?>
+
+<main>
+    <div class="container">
+        <?php
+        if (have_posts()) :
+            while (have_posts()) : the_post();
+        ?>
+                <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                    <div class="entry">
+                        <?php the_excerpt(); ?>
+                    </div>
+                </article>
+        <?php
+            endwhile;
+        else :
+        ?>
+            <p><?php _e('Sorry, no posts matched your criteria.', 'jaki3000'); ?></p>
+        <?php
+        endif;
+        ?>
+    </div>
+</main>
+
+<?php get_footer(); ?>
