@@ -1,3 +1,6 @@
+# Ignore SSH stuff
+*.pub
+
 # Ignore OS-specific files
 .DS_Store
 Thumbs.db
