@@ -5,7 +5,16 @@ Description: A simple custom theme. It will blow your fcking mind.
 Version: 1.0
 */
 
+@font-face {
+    font-family: 'JetBrainsMono Nerd';
+    src: url('assets/fonts/JetBrainsMonoNerdFont-Thin.woff2') format('woff2'),
+         url('assets/fonts/JetBrainsMonoNerdFont-Thin.ttf') format('truetype'); /* Fallback */
+    font-weight: 100; /* Thin */
+    font-style: normal;
+}
+
 :root {
+    --font: 'JetBrainsMono Nerd';
     --background: #191724;
     --surface: #1f1d2e;
     --overlay: #26233a;
@@ -26,7 +35,7 @@ html, body {
     flex-direction: column;
     background-color: var(--background);
     color: var(--text);
-    font-family: "Fira Code", monospace;
+    font-family: var(--font) ,monospace;
 }
 
 /* 🌿 Header */
@@ -96,3 +105,32 @@ footer {
     background: var(--overlay);
     color: var(--text-subtle);
 }
+
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+/* Gigs */
+.gigs ul, .past-gigs ul {
+    list-style: none;
+    padding: 0;
+}
+
+.gigs li, .past-gigs li {
+    background: var(--surface);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Media */
+.media img {
+    width: 100px;
+    display: block;
+    margin: 10px auto;
+    cursor: pointer;
+}
+

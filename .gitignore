@@ -43,3 +43,4 @@ composer.lock
 # Ignore sensitive config files
 .env
 config.json
+assets/
