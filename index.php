@@ -2,6 +2,14 @@
 
 <main>
     <div class="container">
+<!-- beginning to build a one-page site -->
+        <h1>Klubzmer</h1>
+        <section id="intro">We are the band that plays the music that you love.</section>
+        <section id="gigs">
+            <h2>Upcoming Gigs</h2>
+        </section>
+    </div>
+    <div class="container">
         <?php
         if (have_posts()) :
             while (have_posts()) : the_post();

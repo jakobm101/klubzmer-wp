@@ -1,0 +1,58 @@
+/* Header Styles */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem; /* Reduce padding */
+    background-color: var(--surface);
+}
+
+/* Site Title Styling */
+.site-title {
+    margin: 0;
+}
+
+.site-title a {
+    text-decoration: none;
+    color: var(--gold); /* Adjust as needed */
+    font-size: 1.2rem; /* Adjust font size if needed */
+    font-weight: bold;
+}
+
+.site-title h1 {
+    padding: 0;
+    margin: 0;
+}
+
+/* Menu Styles */
+nav {
+    display: flex;
+    padding: 0; /* Remove extra padding */
+    background-color: transparent;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1rem; /* Reduce space between menu items */
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text);
+    padding: 0.25rem 0.5rem; /* Reduce link padding */
+    line-height: 1; /* Set line-height to reduce height */
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+nav a:hover {
+    background-color: var(--overlay);
+    color: var(--accent);
+}

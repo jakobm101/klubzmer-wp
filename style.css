@@ -3,7 +3,10 @@ Theme Name: Jaki 3000
 Author: Jakob Morgenstern
 Description: A simple custom theme. It will blow your fcking mind.
 Version: 1.0
+This file only contains the setup for the theme.
+All the actual styling is done in the main.css file.
 */
+
 
 @font-face {
     font-family: 'JetBrainsMono Nerd';
